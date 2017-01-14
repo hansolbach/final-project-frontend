@@ -1,6 +1,6 @@
 var format = d3.time.format("%Y");
 
-var margin = {top: 20, right: 30, bottom: 30, left: 40},
+var margin = {top: 20, right: 100, bottom: 20, left: 100},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -70,4 +70,13 @@ d3.csv("co2projection_edit.csv", function(error, data) {
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis);
+  
+  //add data label to Y-axis
+  svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("CO2 emission (million metric ton)");  
 });
