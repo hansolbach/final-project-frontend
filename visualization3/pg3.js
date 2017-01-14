@@ -1,7 +1,7 @@
 var format = d3.time.format("%Y");
 
-var margin = {top: 20, right: 100, bottom: 60, left: 100},
-    width = 960 - margin.left - margin.right,
+var margin = {top: 20, right: 150, bottom: 60, left: 100},
+    width = 1100 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var x = d3.time.scale()
@@ -72,6 +72,7 @@ d3.csv("co2projection_edit.csv", function(error, data) {
         .attr("x", width/2 )
         .attr("y",  height + 50 )
         .style("text-anchor", "middle")
+        .style("font-weight","bold")
         .text("Year");
       
   svg.append("g")
@@ -84,6 +85,35 @@ d3.csv("co2projection_edit.csv", function(error, data) {
         .attr("y", 0 - margin.left)
         .attr("x",0 - (height / 2))
         .attr("dy", "1em")
+        .style("font-weight","bold")
         .style("text-anchor", "middle")
-        .text("CO2 emission (million metric ton)");  
+        .text("CO2 emission (million metric ton)");
+
+  // add text label for area    
+  svg.append("text")      
+        .attr("x", width + 10 )
+        .attr("y",  height - 30 )
+        .style("text-anchor", "left")
+        .text("Residential");
+
+  // add text label for area    
+  svg.append("text")      
+        .attr("x", width + 10 )
+        .attr("y",  height - 90 )
+        .style("text-anchor", "left")
+        .text("Commercial");
+
+    // add text label for area    
+  svg.append("text")      
+        .attr("x", width + 10 )
+        .attr("y",  height - 180 )
+        .style("text-anchor", "left")
+        .text("Industrial"); 
+
+    // add text label for area    
+  svg.append("text")      
+        .attr("x", width + 10 )
+        .attr("y",  height - 330 )
+        .style("text-anchor", "left")
+        .text("Transportation");   
 });
