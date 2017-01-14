@@ -1,17 +1,4 @@
-#source bl.ocks.org/NPashaP/a74faf20b492ad377312#
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style src="style.css" rel="stylesheet" type="text/css">
-	
-</style>
-<body>
-<div id="tooltip"></div><!-- div to hold tooltip. -->
-<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-<script src="uStates.js"></script> <!-- creates uStates. -->
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-
-	function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
+function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
 		return "<h4>"+n+"</h4><table>"+
 			"<tr><td>Low</td><td>"+(d.low)+"</td></tr>"+
 			"<tr><td>Average</td><td>"+(d.avg)+"</td></tr>"+
@@ -37,6 +24,3 @@
 	uStates.draw("#statesvg", sampleData, tooltipHtml);
 	
 	d3.select(self.frameElement).style("height", "600px"); 
-</script>
-
-</body>
