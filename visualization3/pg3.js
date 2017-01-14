@@ -1,6 +1,6 @@
 var format = d3.time.format("%Y");
 
-var margin = {top: 20, right: 100, bottom: 20, left: 100},
+var margin = {top: 20, right: 100, bottom: 60, left: 100},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -67,6 +67,13 @@ d3.csv("co2projection_edit.csv", function(error, data) {
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
+  // add text label for x axis    
+  svg.append("text")      
+        .attr("x", width/2 )
+        .attr("y",  height + 50 )
+        .style("text-anchor", "middle")
+        .text("Year");
+      
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis);
