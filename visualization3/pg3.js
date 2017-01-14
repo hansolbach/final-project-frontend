@@ -1,4 +1,4 @@
-var format = d3.time.format("%m/%d/%y");
+var format = d3.time.format("%Y");
 
 var margin = {top: 20, right: 30, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
@@ -15,7 +15,7 @@ var z = d3.scale.category20c();
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
-    .ticks(d3.time.days);
+    .tickFormat(d3.time.format("%Y"));
 
 var yAxis = d3.svg.axis()
     .scale(y)
@@ -42,7 +42,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("data.csv", function(error, data) {
+d3.csv("co2projection_edit.csv", function(error, data) {
   if (error) throw error;
 
   data.forEach(function(d) {
