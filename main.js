@@ -1,8 +1,8 @@
 document.querySelector('img').onclick = function() {
-    alert('Stop poking Ben!');
+    alert('This is a real picture!');
 }
 
-alert('Do you love Ben like we do?');
+alert('Do you think Climate Change is a lie? Think Again, and here are our evidences!');
 
 /* 
 I look forward to learning from the final project

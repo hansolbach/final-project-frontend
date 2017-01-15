@@ -1,5 +1,5 @@
 p {
-  color: white;
+  color: red;
   width: 500px;
   border: 1px solid gray;
 }
@@ -9,7 +9,7 @@ li,h1 {
 }
 
 html {
-  background-color: #FF9500;
+  background-color: black;
 }
 
 body {
