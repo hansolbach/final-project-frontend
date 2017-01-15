@@ -1,51 +1,51 @@
 state,num,FIPS
-Alabama,6,01
-Alaska,1,02
-Arizona,23,04
-Arkansas,4,05
-California,30,06
-Colorado,34,08
-Connecticut,14,09
-Delaware,48,10
-Florida,11,12
-Georgia,41,13
-Hawaii,0,15
-Idaho,7,16
-Illinois,18,17
-Indiana,16,18
-Iowa,33,19
-Kansas,22,20
-Kentucky,8,21
-Louisiana,7,22
-Maine,24,23
-Maryland,106,24
-Massachusetts,42,25
-Michigan,21,26
-Minnesota,165,27
-Mississippi,3,28
-Missouri,13,29
-Montana,6,30
-Nebraska,17,31
-Nevada,55,32
-New Hampshire,6,33
-New Jersey,69,34
-New Mexico,3,35
-New York,48,36
-North Carolina,19,37
-North Dakota,16,38
-Ohio,41,39
-Oklahoma,9,40
-Oregon,14,41
-Pennsylvania,30,42
-Rhode Island,51,44
-South Carolina,6,45
-South Dakota,25,46
-Tennessee,25,47
-Texas,26,48
-Utah,13,49
-Vermont,20,50
-Virginia,75,51
+Alabama,123,1
+Alaska,35,2
+Arizona,93,4
+Arkansas,69,5
+California,358,6
+Colorado,92,8
+Connecticut,35,9
+Delaware,13,10
+Florida,228,12
+Georgia,140,13
+Hawaii,18,15
+Idaho,17,16
+Illinois,234,17
+Indiana,207,18
+Iowa,82,19
+Kansas,70,20
+Kentucky,139,21
+Louisiana,218,22
+Maine,17,23
+Maryland,62,24
+Massachusetts,64,25
+Michigan,163,26
+Minnesota,95,27
+Mississippi,64,28
+Missouri,132,29
+Montana,32,30
+Nebraska,52,31
+Nevada,37,32
+New Hampshire,15,33
+New Jersey,114,34
+New Mexico,50,35
+New York,170,36
+North Carolina,127,37
+North Dakota,59,38
+Ohio,232,39
+Oklahoma,105,40
+Oregon,38,41
+Pennsylvania,245,42
+Rhode Island,11,44
+South Carolina,75,45
+South Dakota,15,46
+Tennessee,104,47
+Texas,642,48
+Utah,65,49
+Vermont,6,50
+Virginia,104,51
 Washington,73,53
-West Virginia,1,54
-Wisconsin,7,55
-Wyoming,16,56
+West Virginia,98,54
+Wisconsin,101,55
+Wyoming,66,56
