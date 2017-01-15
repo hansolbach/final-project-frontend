@@ -1,9 +1,19 @@
 User Story 1 
- As a: A government official at the Department of Environmental Affiars of the U.S. Government,
+ As: A government official at the Department of Environmental Affiars of the U.S. Government,
  I want: to see the trend of CO2 emissions over the past few decades
  So that: I can make an informed policy decision for establishing relevant carbon emission reduction regulations.
 
 User Story 2
- As a: A environmental advocate,
+ As: An environmental advocate,
  I want: to learn about which states emit the most GHG and which states do the least
  So that: I can build a nationwide advocacy strategy, especially, in order to efficiently mobilize and allocate resources and run campaigns where it needs the most.
+
+User story 3
+ As a: environmental policy planner,
+ I want: to understand the long term projection of CO2 emission
+ so that: I know whether our current energy supply and demand strategy make sense and sustainable for our grandchildren
+
+User story 4
+ As a: environmental policy planner,
+ I want: to know emission's per sector
+ so that: I could focus my effor to the big sector to reduce emission  
