@@ -9,6 +9,12 @@ body {
   shape-rendering: crispEdges;
 }
 
+h1 {
+  font-family: arial;
+  color: red
+}
+
+
 .tooltip {
   position: absolute;
   text-align: center;
