@@ -116,4 +116,6 @@ d3.csv("co2projection_edit.csv", function(error, data) {
         .attr("y",  height - 330 )
         .style("text-anchor", "left")
         .text("Transportation");   
+
+
 });
