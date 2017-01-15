@@ -160,7 +160,7 @@ function ready(error, us, maptemplate) {
   maptemplate.forEach(function(d) { stateByFIPS[d.FIPS] = d.state; });
 
   //Appends chart headline
-  d3.select(".g-hed").text("Map headline goes here");
+  d3.select(".g-hed").text("Statewide Data");
 
   //Appends chart intro text
   d3.select(".g-intro").text("Map intro text goes here. Write a short sentence describing the map here.");
