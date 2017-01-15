@@ -36,7 +36,13 @@ var area = d3.svg.area()
     .y0(function(d) { return y(d.y0); })
     .y1(function(d) { return y(d.y0 + d.y); });
 
-var svg = d3.select("body").append("svg")
+// Add chart variable to enable mouse tracker
+
+var chart = d3.select("#chart").append("svg");
+
+// change svg variable to link with chart variable
+// this is the different with master version
+var svg = chart
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -55,12 +61,82 @@ d3.csv("co2projection_edit.csv", function(error, data) {
   x.domain(d3.extent(data, function(d) { return d.date; }));
   y.domain([0, d3.max(data, function(d) { return d.y0 + d.y; })]);
 
+  // ad div variable for tooltip
+  var div = d3.select(".tooltip")
+    .attr("class", "tooltip")
+    .style("opacity", 1e-6);
+
+  //initialize dataPoints
+  var dataPoints = {};
+
   svg.selectAll(".layer")
       .data(layers)
     .enter().append("path")
       .attr("class", "layer")
       .attr("d", function(d) { return area(d.values); })
       .style("fill", function(d, i) { return z(i); });
+
+  //points
+  var points = svg.selectAll('.dots')
+    .data(layers)
+    .enter()
+    .append("g")
+    .attr("class", "dots")
+    .attr("d", function(d) { return area(d.values); })
+    .attr("clip-path", "url(#clip)");   
+
+  points.selectAll('.dot')
+    .data(function(d, index){   
+        var a = [];
+        
+  d.values.forEach(function(point,i){
+    a.push({'index': index, 'point': point});
+        });     
+        return a;
+    })
+    .enter()
+    .append('circle')
+    .attr('class','dot')
+    .attr("r", 2.5)
+    .attr('fill', function(d,i){    
+        return '#abc';
+    })  
+    .attr("transform", function(d) { 
+        var key = x(d.point.date);
+        dataPoints[key] = dataPoints[key] || [];
+        dataPoints[key].push(d);
+        return "translate(" + x(d.point.date) + "," + y(d.point.y+d.point.y0) + ")"; }
+    );
+
+//vertical line
+var vertline = svg.append('line')
+  .attr('class','vertline')
+  .attr('x1',0)
+  .attr('x2',0)
+  .attr('y1',0)
+  .attr('y2',height)
+  .attr('stroke','rgba(100,150,200,0.8)')
+  .attr('stroke-width',1);
+
+chart.on('mousemove', function () {
+  mouseX = d3.event.pageX-margin.left;
+  var keys = _.keys(dataPoints).sort();
+  var epsilon = (keys[1]-keys[0])/2;
+  var nearest = _.find(keys, function(a) {
+    return Math.abs(a - mouseX) <= epsilon
+  });
+  if(nearest){
+    var dps = dataPoints[nearest];
+    vertline.attr('x1', nearest)
+            .attr('x2', nearest)
+    div.transition()
+      .duration(500)
+      .text(_.collect(dps,function(dp){
+        return dp.point.y0 + dp.point.y;
+      }).join(','))
+      .style("opacity", 1)
+  }
+});
 
   svg.append("g")
       .attr("class", "x axis")
