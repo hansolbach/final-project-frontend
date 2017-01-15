@@ -117,5 +117,276 @@ d3.csv("co2projection_edit.csv", function(error, data) {
         .style("text-anchor", "left")
         .text("Transportation");   
 
+  // add data label for x = 2020     
+  svg.append("text")      
+        .attr("x", width - 745 )
+        .attr("y",  height - 80 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("986");
+
+      
+  svg.append("text")      
+        .attr("x", width - 745 )
+        .attr("y",  height - 150 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("873");
+
+       
+  svg.append("text")      
+        .attr("x", width - 745)
+        .attr("y",  height - 280 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1541"); 
+
+      
+  svg.append("text")      
+        .attr("x", width - 745)
+        .attr("y",  height - 425 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1872");  
+
+// add data label for x = 2025   
+  svg.append("text")      
+        .attr("x", width - 625 )
+        .attr("y",  height - 75 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("901");
+     
+  svg.append("text")      
+        .attr("x", width - 625 )
+        .attr("y",  height - 140 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("804");
+
+       
+  svg.append("text")      
+        .attr("x", width - 625)
+        .attr("y",  height - 260 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1570"); 
+
+      
+  svg.append("text")      
+        .attr("x", width - 625)
+        .attr("y",  height - 405 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1794");  
+
+// add data label for x = 2030   
+  svg.append("text")      
+        .attr("x", width - 500 )
+        .attr("y",  height - 75 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("852");
+     
+  svg.append("text")      
+        .attr("x", width - 500 )
+        .attr("y",  height - 130 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("763");
+       
+  svg.append("text")      
+        .attr("x", width - 500)
+        .attr("y",  height - 250 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1525"); 
+
+      
+  svg.append("text")      
+        .attr("x", width - 500)
+        .attr("y",  height - 395 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1711"); 
+
+// add data label for x = 2035   
+  svg.append("text")      
+        .attr("x", width - 375 )
+        .attr("y",  height - 75 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("843");
+     
+  svg.append("text")      
+        .attr("x", width - 375 )
+        .attr("y",  height - 130 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("766");
+       
+  svg.append("text")      
+        .attr("x", width - 375)
+        .attr("y",  height - 250 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1532"); 
+
+      
+  svg.append("text")      
+        .attr("x", width - 375)
+        .attr("y",  height - 395 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1687"); 
+
+
+// add data label for x = 2040   
+  svg.append("text")      
+        .attr("x", width - 250 )
+        .attr("y",  height - 75 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("834");
+     
+  svg.append("text")      
+        .attr("x", width - 250 )
+        .attr("y",  height - 130 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("773");
+       
+  svg.append("text")      
+        .attr("x", width - 250)
+        .attr("y",  height - 260 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1555"); 
+
+      
+  svg.append("text")      
+        .attr("x", width - 250)
+        .attr("y",  height - 395 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1717"); 
+
+// add data label for x = 2045   
+
+  svg.append("text")      
+        .attr("x", width - 125 )
+        .attr("y",  height - 75 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("825");
+     
+  svg.append("text")      
+        .attr("x", width - 125 )
+        .attr("y",  height - 130 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("790");
+       
+  svg.append("text")      
+        .attr("x", width - 125)
+        .attr("y",  height - 260 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1575"); 
+
+      
+  svg.append("text")      
+        .attr("x", width - 125)
+        .attr("y",  height - 400 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1777"); 
+
+// add data label for x = 2050   
+
+  svg.append("text")      
+        .attr("x", width - 25 )
+        .attr("y",  height - 75 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("814");
+     
+  svg.append("text")      
+        .attr("x", width - 25 )
+        .attr("y",  height - 130 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("814");
+       
+  svg.append("text")      
+        .attr("x", width - 25)
+        .attr("y",  height - 260 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1607"); 
+
+      
+  svg.append("text")      
+        .attr("x", width - 25)
+        .attr("y",  height - 410 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .attr("fill", "blue")
+        .style("text-anchor", "left")
+        .text("1849"); 
 
 });
