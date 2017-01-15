@@ -74,6 +74,16 @@ d3.csv("co2projection_edit.csv", function(error, data) {
         .style("text-anchor", "middle")
         .style("font-weight","bold")
         .text("Year");
+
+  // add source     
+  svg.append("text")      
+        .attr("x", width - 50)
+        .attr("y",  height + 50 )
+        .attr("font-family", "Helvetica")
+        .attr("font-size", "12px")
+        .style("text-anchor", "middle")
+        .style("font-weight","italic")
+        .text("source: EIA, 2017 Annual Energy Outlook");
       
   svg.append("g")
       .attr("class", "y axis")
