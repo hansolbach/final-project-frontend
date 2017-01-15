@@ -1,7 +1,7 @@
-var format = d3.time.format("%m/%d/%y");
+var format = d3.time.format("%Y");
 
-var margin = {top: 20, right: 30, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
+var margin = {top: 20, right: 150, bottom: 60, left: 100},
+    width = 1100 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var x = d3.time.scale()
@@ -15,7 +15,7 @@ var z = d3.scale.category20c();
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
-    .ticks(d3.time.days);
+    .tickFormat(d3.time.format("%Y"));
 
 var yAxis = d3.svg.axis()
     .scale(y)
@@ -42,7 +42,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("data.csv", function(error, data) {
+d3.csv("co2projection_edit.csv", function(error, data) {
   if (error) throw error;
 
   data.forEach(function(d) {
@@ -67,7 +67,53 @@ d3.csv("data.csv", function(error, data) {
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
+  // add text label for x axis    
+  svg.append("text")      
+        .attr("x", width/2 )
+        .attr("y",  height + 50 )
+        .style("text-anchor", "middle")
+        .style("font-weight","bold")
+        .text("Year");
+      
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis);
+  
+  //add data label to Y-axis
+  svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("font-weight","bold")
+        .style("text-anchor", "middle")
+        .text("CO2 emission (million metric ton)");
+
+  // add text label for area    
+  svg.append("text")      
+        .attr("x", width + 10 )
+        .attr("y",  height - 30 )
+        .style("text-anchor", "left")
+        .text("Residential");
+
+  // add text label for area    
+  svg.append("text")      
+        .attr("x", width + 10 )
+        .attr("y",  height - 90 )
+        .style("text-anchor", "left")
+        .text("Commercial");
+
+    // add text label for area    
+  svg.append("text")      
+        .attr("x", width + 10 )
+        .attr("y",  height - 180 )
+        .style("text-anchor", "left")
+        .text("Industrial"); 
+
+    // add text label for area    
+  svg.append("text")      
+        .attr("x", width + 10 )
+        .attr("y",  height - 330 )
+        .style("text-anchor", "left")
+        .text("Transportation");   
 });
