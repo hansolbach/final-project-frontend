@@ -1,51 +1,51 @@
-State,"Consumption per Capita, Million Btu"
-AK,818
-AL,404
-AR,376
-AZ,211
-CA,196
-CO,276
-CT,209
-DE,293
-FL,207
-GA,282
-HI,198
-IA,496
-ID,318
-IL,314
-IN,444
-KS,390
-KY,401
-LA,921
-MA,213
-MD,234
-ME,309
-MI,291
-MN,350
-MO,314
-MS,386
-MT,394
-NC,257
-ND,865
-NE,459
-NH,234
-NJ,262
-NM,326
-NV,233
-NY,190
-OH,329
-OK,433
-OR,249
-PA,305
-RI,194
-SC,338
-SD,459
-TN,335
-TX,478
-UT,271
-VA,292
-VT,223
-WA,285
-WI,324
-WV,407
-WY,917
+state,num,FIPS
+Alabama,404,1
+Alaska,818,2
+Arizona,211,4
+Arkansas,376,5
+California,196,6
+Colorado,276,8
+Connecticut,209,9
+Delaware,293,10
+Florida,207,12
+Georgia,282,13
+Hawaii,198,15
+Idaho,318,16
+Illinois,314,17
+Indiana,444,18
+Iowa,496,19
+Kansas,390,20
+Kentucky,401,21
+Louisiana,921,22
+Maine,309,23
+Maryland,234,24
+Massachusetts,213,25
+Michigan,291,26
+Minnesota,350,27
+Mississippi,386,28
+Missouri,314,29
+Montana,394,30
+Nebraska,459,31
+Nevada,233,32
+New Hampshire,234,33
+New Jersey,262,34
+New Mexico,326,35
+New York,190,36
+North Carolina,257,37
+North Dakota,865,38
+Ohio,329,39
+Oklahoma,433,40
+Oregon,249,41
+Pennsylvania,305,42
+Rhode Island,194,44
+South Carolina,338,45
+South Dakota,459,46
+Tennessee,335,47
+Texas,478,48
+Utah,271,49
+Vermont,223,50
+Virginia,292,51
+Washington,285,53
+West Virginia,407,54
+Wisconsin,324,55
+Wyoming,917,56

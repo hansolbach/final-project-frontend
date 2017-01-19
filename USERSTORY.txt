@@ -15,5 +15,11 @@ User story 3
 
 User story 4
  As a: environmental policy planner,
- I want: to know emission's per sector
+ I want: to know emissions per sector
  so that: I could focus my effor to the big sector to reduce emission  
+
+ User story 5
+ As a: state policymaker,
+ I want: to easily understand and compare state energy consumption
+ so that: I can set realistic targets for energy efficiency 
+
