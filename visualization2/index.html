@@ -159,10 +159,10 @@ function ready(error, us, maptemplate) {
   maptemplate.forEach(function(d) { stateByFIPS[d.FIPS] = d.state; });
 
   //Appends chart headline
-  d3.select(".g-hed").text("Statewide Data");
+  d3.select(".g-hed").text("Statewide Emissions Data");
 
   //Appends chart intro text
-  d3.select(".g-intro").text("State carbon dioxide emissions n 2014, cubic metric tons");
+  d3.select(".g-intro").text("State carbon dioxide emissions in 2014, millions of metric tons");
 
   //Append states
   map.append("g")
@@ -180,7 +180,7 @@ function ready(error, us, maptemplate) {
       d3.select(this).transition().duration(300).style("opacity", 0.8);
       div.transition().duration(300)
       .style("opacity", 1)
-      div.text(stateByFIPS[d.id] + ": " + dataByFIPS[d.id])
+      div.text(stateByFIPS[d.id] + ": " + dataByFIPS[d.id] + " million metric tons, 2014")
       .style("left", (d3.event.pageX) + "px")
       .style("top", (d3.event.pageY -30) + "px");
     })
