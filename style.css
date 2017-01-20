@@ -64,9 +64,18 @@ ul.nav li {
 ul.nav a {
     display:block;
     padding:0 18px;
-    color: #6E86D6;
+    background-color: #6E86D6;
     text-decoration:none;
 }
 ul.nav li:hover {
     background-color:#eaeae1;
+}
+
+button {
+  background-color: white;
+  padding: 2px;
+  color: #6E86D6;
+  border-width: 3px;
+  border-radius: 3px;
+  border-color: #6E86D6;
 }
