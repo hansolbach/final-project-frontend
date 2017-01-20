@@ -1,3 +1,11 @@
+// functionality for button
+var button = document.querySelector("button");
+var script = document.querySelector(".main");
+button.onClick = function() {
+    // when button is clicked, switch between co2 and energy
+      script.setAttribute("src", "viz2energy.js");
+}
+
 //Creates tooltip and makes it invisiblae
 var div = d3.select("body").append("div")
   .attr("class", "tooltip")
@@ -143,10 +151,4 @@ function resize() {
 }
 }
 
-// functionality for button
-var button = document.querySelector("button");
-var script = document.querySelector(".main");
-button.onClick = function() {
-    // when button is clicked, switch between co2 and energy
-      script.setAttribute("src", "viz2energy.js");
-}
+
