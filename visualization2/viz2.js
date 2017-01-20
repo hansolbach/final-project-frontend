@@ -26,7 +26,7 @@ var map = d3.select(".g-chart").append("svg")
 
 //Load the files
 queue()
-    .defer(d3.json, "us.json")
+    .defer(d3.json, "visualization2/us.json")
     .defer(d3.csv, "https://raw.githubusercontent.com/hansolbach/backend/master/chart2/maptemplate.csv")
     .await(draw);
 
@@ -145,7 +145,7 @@ function resize() {
 
 function changeData(csv_filename) {
       d3.csv(csv_filename, function(error, csv) {
-        d3.json("us.json", function(error,json) {
+        d3.json("visualization2/us.json", function(error,json) {
           draw(error,json,csv);
         });
       });
