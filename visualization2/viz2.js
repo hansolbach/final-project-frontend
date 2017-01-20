@@ -28,7 +28,7 @@ var map = d3.select(".g-chart").append("svg")
 queue()
     .defer(d3.json, "us.json")
     .defer(d3.csv, "maptemplate.csv")
-    .await(ready);
+    .await(draw);
 
 //Moves selection to front
 d3.selection.prototype.moveToFront = function() {
@@ -47,7 +47,7 @@ d3.selection.prototype.moveToBack = function() {
   }); 
 };    
 
-function ready(error, us, maptemplate) {
+function draw(error, us, maptemplate) {
   if (error) throw error;
 
   console.log(us, maptemplate);   
