@@ -23,22 +23,23 @@
   <button id="maptemplate">Map Tempalte View</button>
   <button id="stateenergy">State Energy View</button>
   <script type="text/javascript">
-    // Add onclick function to button 1
-    document.querySelector('#maptemplate').onclick = function () {
-      d3.csv("maptemplate.csv", function(error, csv) {
+
+    function changeData(csv_filename) {
+      d3.csv(csv_filename, function(error, csv) {
         d3.json("us.json", function(error,json) {
           draw(error,json,csv);
         });
       });
+    };
+
+    // Add onclick function to button 1
+    document.querySelector('#maptemplate').onclick = function () {
+      changeData("maptemplate.csv");
     }
 
     // Add onclick function to button 2
     document.querySelector('#stateenergy').onclick = function () {
-      d3.csv("StateEnergy.csv", function(error, csv) {
-        d3.json("us.json", function(error,json) {
-          draw(error,json,csv);
-        });
-      });
+      changeData("StateEnergy.csv");
     }
   </script>
   <script class="main" src="viz2.js" type="text/javascript"></script>
