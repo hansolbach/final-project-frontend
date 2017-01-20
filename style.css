@@ -1,37 +1,81 @@
 p {
-  color: white;
-  width: 500px;
-
-}
-
-li,h1 {
-  color: red;
+    color: black;
+    width: 75%;
 }
 
 html {
-  background-color: gray;
+  background-color: white;
 }
 
 body {
-  width: 500px;
+  width: 80%;
   margin: 0 auto;
-  background-color: black;
+  background-color: #6699ff;
   padding: 0 20px 20px 20px;
-  border: 5px solid white;
+  border: 5px solid black;
+  border-radius: 5px;
 }
 
 h1 {
   margin: 0;
-  padding: 20px 0;    
-  color: white;
-  text-shadow: 3px 3px 1px gray;
+  padding: 20px 0;
+  color: #3377ff;
 }
 
-img {
-	width: 500px;
+h1#title {
+    font-style: bold;
 }
+
+.quote{
+  background: #6699ff;
+  border-left: 10px solid #6E86D6;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  color: white;
+
+}
+
 
 img {
   display: block;
   margin: 0 auto;
+  width: 500px;
+}
+
+ul.nav {
+    margin:0;
+    padding:0;
+    width: 100%;
+    float: left;
+    list-style:none;
+    height:36px; line-height:36px;
+    background: white; 
+    font-family:Arial, Helvetica, sans-serif;
+    color: #6E86D6;
+    font-size:20px;
+    font-style: bold;
+    position: fixed;
+}
+ul.nav li {
+    border-right:1px solid #ccffdd; /* you can change the border color matching to your background color */
+    float:left;
+}
+ul.nav a {
+    display:block;
+    padding:0 18px;
+    background-color: #6E86D6;
+    text-decoration:none;
+}
+ul.nav li:hover {
+    background-color:#eaeae1;
+}
+
+button {
+  background-color: white;
+  padding: 2px;
+  color: #6E86D6;
+  border-width: 3px;
+  border-radius: 3px;
+  border-color: #6E86D6;
 }
