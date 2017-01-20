@@ -1,11 +1,3 @@
-// functionality for button
-var button = document.querySelector("button");
-var script = document.querySelector(".main");
-button.onClick = function() {
-    // when button is clicked, switch between co2 and energy
-      script.setAttribute("src", "viz2energy.js");
-}
-
 //Creates tooltip and makes it invisiblae
 var div = d3.select("body").append("div")
   .attr("class", "tooltip")
@@ -36,7 +28,7 @@ var map = d3.select(".g-chart").append("svg")
 queue()
     .defer(d3.json, "us.json")
     .defer(d3.csv, "maptemplate.csv")
-    .await(ready);
+    .await(draw);
 
 //Moves selection to front
 d3.selection.prototype.moveToFront = function() {
@@ -55,7 +47,7 @@ d3.selection.prototype.moveToBack = function() {
   }); 
 };    
 
-function ready(error, us, maptemplate) {
+function draw(error, us, maptemplate) {
   if (error) throw error;
 
   console.log(us, maptemplate);   
@@ -151,4 +143,20 @@ function resize() {
 }
 }
 
+function changeData(csv_filename) {
+      d3.csv(csv_filename, function(error, csv) {
+        d3.json("us.json", function(error,json) {
+          draw(error,json,csv);
+        });
+      });
+    };
 
+    // Add onclick function to button 1
+    document.querySelector('#maptemplate').onclick = function () {
+      changeData("maptemplate.csv");
+    }
+
+    // Add onclick function to button 2
+    document.querySelector('#stateenergy').onclick = function () {
+      changeData("StateEnergy.csv");
+    }
