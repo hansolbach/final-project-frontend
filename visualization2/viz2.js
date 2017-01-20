@@ -27,7 +27,7 @@ var map = d3.select(".g-chart").append("svg")
 //Load the files
 queue()
     .defer(d3.json, "us.json")
-    .defer(d3.csv, "maptemplate.csv")
+    .defer(d3.csv, "https://github.com/hansolbach/backend/chart2/maptemplate.csv")
     .await(draw);
 
 //Moves selection to front
@@ -153,10 +153,10 @@ function changeData(csv_filename) {
 
     // Add onclick function to button 1
     document.querySelector('#maptemplate').onclick = function () {
-      changeData("maptemplate.csv");
+      changeData("https://github.com/hansolbach/backend/chart2/maptemplate.csv");
     }
 
     // Add onclick function to button 2
     document.querySelector('#stateenergy').onclick = function () {
-      changeData("StateEnergy.csv");
+      changeData("https://github.com/hansolbach/backend/chart2/StateEnergy.csv");
     }
