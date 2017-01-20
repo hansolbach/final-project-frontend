@@ -143,4 +143,20 @@ function resize() {
 }
 }
 
+function changeData(csv_filename) {
+      d3.csv(csv_filename, function(error, csv) {
+        d3.json("us.json", function(error,json) {
+          draw(error,json,csv);
+        });
+      });
+    };
 
+    // Add onclick function to button 1
+    document.querySelector('#maptemplate').onclick = function () {
+      changeData("maptemplate.csv");
+    }
+
+    // Add onclick function to button 2
+    document.querySelector('#stateenergy').onclick = function () {
+      changeData("StateEnergy.csv");
+    }

@@ -22,26 +22,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
   <button id="maptemplate">Map Tempalte View</button>
   <button id="stateenergy">State Energy View</button>
-  <script type="text/javascript">
-
-    function changeData(csv_filename) {
-      d3.csv(csv_filename, function(error, csv) {
-        d3.json("us.json", function(error,json) {
-          draw(error,json,csv);
-        });
-      });
-    };
-
-    // Add onclick function to button 1
-    document.querySelector('#maptemplate').onclick = function () {
-      changeData("maptemplate.csv");
-    }
-
-    // Add onclick function to button 2
-    document.querySelector('#stateenergy').onclick = function () {
-      changeData("StateEnergy.csv");
-    }
-  </script>
   <script class="main" src="viz2.js" type="text/javascript"></script>
   <a href="https://hansolbach.github.io/frontend/visualization3/page3.html">Check out the next page</a>
 </body>
