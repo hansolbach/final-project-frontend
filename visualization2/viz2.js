@@ -5,7 +5,7 @@ var div = d3.select("body").append("div")
 
 //Sets dimensions
 var margin = {top: 10, left: 10, bottom: 10, right: 10}
-  , width = window.outerWidth
+  , width = d3.select(".g-chart").node().clientWidth
   , width = width - margin.left - margin.right
   , mapRatio = .5
   , height = width * mapRatio;
