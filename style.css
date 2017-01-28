@@ -50,11 +50,10 @@ ul.nav {
     float: left;
     list-style:none;
     height:36px; line-height:36px;
-    background: white; 
     font-family:Arial, Helvetica, sans-serif;
     color: #6E86D6;
-    font-size:20px;
-    font-style: bold;
+    font-size:14px;
+    font-weight: bold;
     position: fixed;
 }
 ul.nav li {
